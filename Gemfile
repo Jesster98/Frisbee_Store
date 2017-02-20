@@ -6,13 +6,14 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'ruby'
+gem 'bcrypt'
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'byebug', platform: :mri
+  gem 'sqlite3', '>= 1.3.12'
+  gem 'byebug',  '>= 9.0.0', platform: :mri
 end
 
 group :development do
@@ -20,9 +21,11 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'brakeman'
+  gem 'reek'
+  gem 'rubocop'
 end
 
 group :production do
   gem 'pg'
 end
-
