@@ -1,24 +1,41 @@
 <p id="notice"><%= notice %></p>
 
+<div class="panel panel-default">
+
+<div class="panel-heading">product</div>
+
+<div class="panel-body">
+
+
 <p>
-  <strong> title:</strong>
-  <%= @product. title %>
+  <strong>Title:</strong>
+  <%= @product.title %>
 </p>
+
 
 <p>
   <strong>Description:</strong>
-  <%= @product.description %>
+  <%= strip_tags(@product.description) %>
 </p>
+
 
 <p>
   <strong>Image url:</strong>
-  <%= @product.image_url %>
+  <%= image_tag(@product.image_url) %>
 </p>
+
 
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+</div>
+
+<div class="panel-footer">
+
+<%= link_to 'Edit', edit_product_path(@product) ,class:"btn btn-xs btn-danger" %> |
+<%= link_to 'Back', products_path , class:"btn btn-xs btn-danger" %>
+
+</div></div>
