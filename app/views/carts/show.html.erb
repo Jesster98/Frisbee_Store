@@ -1,15 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<div class="panel panel-default">
-
-<div class="panel-header">cart</div>
-
-<div class="panel-body">
-
-
-</div>
-
-<div class="panel-footer">
-
-<%= link_to 'Edit', edit_cart_path(@cart) ,class:"btn btn-xs btn-danger" %> |
-<%= link_to 'Back', carts_path , class:"btn btn-xs btn-danger" %>
+<h2> Products</h2>
+<ul>
+ <% @cart.line_items.each do |item| %>
+  <li><%= item.product.title %></li> 
+  <% end %>
+</ul>
