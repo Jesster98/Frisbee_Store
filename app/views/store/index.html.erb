@@ -1,7 +1,8 @@
-<h1>Store</h1>
+<p><h1>Welcome To The Store</h1></p>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Your Pragmatic Catalog</h1>
+<h3>Your Pragmatic Catalog</h3>
 
 <table class="table table-responsive">
   <thead>
@@ -15,15 +16,15 @@
   </thead>
 
   <tbody>
-    <% @products.each do |product| %>
+    <% @products.each do |produce| %>
       <tr>
-        <td><%= product.title %></td>
-        <td><%= (sanitize(product.description)) %></td>
-        <td><%= image_tag(product.image_url) %></td>
-        <td><%= number_to_currency(product.price) %><%= button_to 'Add to Cart', line_items_path(product_id: product) %></td>
-        <td><%= link_to 'Show', product , class:"btn btn-xs btn-danger" %>
-        <%= link_to 'Edit', edit_product_path(product) , class:"btn btn-xs btn-danger" %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %></td>
+        <td><%= produce.title %></td>
+        <td><%= (sanitize(produce.description)) %></td>
+        <td><%= image_tag(produce.image_url) %></td>
+        <td><%= number_to_currency(produce.price) %><%= button_to 'Add to Cart', line_items_path(product_id: produce) %></td>
+        <td><%= link_to 'Show', produce , class:"btn btn-xs btn-danger" %>
+        <%= link_to 'Edit', edit_product_path(produce) , class:"btn btn-xs btn-danger" %>
+        <%= link_to 'Destroy', produce, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

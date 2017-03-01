@@ -2,20 +2,20 @@
 
 <div class="panel panel-default">
 
-<div class="panel-header">line_item</div>
+<div class="panel-heading">line_item</div>
 
 <div class="panel-body">
 
 
 <p>
   <strong>Product:</strong>
-  <%= @line_item.product %>
+  <%= @line_item.product.title %>
 </p>
 
 
 <p>
   <strong>Cart:</strong>
-  <%= @line_item.cart %>
+  <%= @line_item.cart_id %>
 </p>
 
 
@@ -25,3 +25,5 @@
 
 <%= link_to 'Edit', edit_line_item_path(@line_item) ,class:"btn btn-xs btn-danger" %> |
 <%= link_to 'Back', line_items_path , class:"btn btn-xs btn-danger" %>
+
+</div></div>
