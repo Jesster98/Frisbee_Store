@@ -24,7 +24,7 @@
         <td><%= number_to_currency(produce.price) %><%= button_to 'Add to Cart', line_items_path(product_id: produce) %></td>
         <td><%= link_to 'Show', produce , class:"btn btn-xs btn-danger" %>
         <%= link_to 'Edit', edit_product_path(produce) , class:"btn btn-xs btn-danger" %>
-        <%= link_to 'Destroy', produce, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %></td>
+        <%= link_to 'Destroy', produce, method: :delete, data: { confirm: 'Would you like to rethink?' } , class:"btn btn-xs btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
