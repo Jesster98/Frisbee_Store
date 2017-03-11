@@ -12,17 +12,15 @@
     <nav class="navbar navbar-success">
   
     <div class="navbar-header">
-      <a class="navbar-brand" href="/"><%= image_tag 'rails.png', alt: 'The Major Depot' %></a>
+      <a class="navbar-brand" href="/"><%= image_tag '123.JPG', alt: 'The Major Depot' %></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/">Root</a></li>
       <li><a href="/store/index">Store</a></li>
       <li><a href="/carts">Carts</a></li>
       <li><a href="/line_items">Line Items</a></li>
       <li><a href="/products">Products</a></li>
       <% if session[:user_id] %>
       <li><%= link_to 'Orders', orders_path %></li>
-      <li><%= link_to 'Products', products_path %></li>
       <li><%= link_to 'Users', users_path %></li>
      <%= button_to 'Logout', logout_path, method: :delete %>
  <% end %>

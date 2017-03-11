@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  namespace :help do
+    resources :pages
+  end
   get 'admin' => 'admin#index'
 
   controller :sessions do
